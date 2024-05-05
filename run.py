@@ -1,4 +1,5 @@
 import gspread
+import os
 from google.oauth2.service_account import Credentials
 
 SCOPE = [
@@ -18,6 +19,7 @@ def get_sales_data():
     Get sales figures input from the user.
     """
     while True:
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("Please enter sales data from the last market.")
         print("Data should be six numbers, separated by commas.")
         print("Example: 10,20,30,40,50,60\n")
